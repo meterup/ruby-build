@@ -74,7 +74,7 @@ The build process may be configured through the following environment variables:
 | `RUBY_BUILD_CURL_OPTS`   | Additional options to pass to `curl` for downloading.                                            |
 | `RUBY_BUILD_WGET_OPTS`   | Additional options to pass to `wget` for downloading.                                            |
 | `RUBY_BUILD_MIRROR_URL`  | Custom mirror URL root.                                                                          |
-| `RUBY_BUILD_SKIP_MIRROR` | Bypass the download mirror and fetch all package files from their original URLs.                  |
+| `RUBY_BUILD_SKIP_MIRROR` | Bypass the download mirror and fetch all package files from their original URLs.                 |
 | `RUBY_BUILD_ROOT`        | Custom build definition directory. (Default: `share/ruby-build`)                                 |
 | `RUBY_BUILD_DEFINITIONS` | Additional paths to search for build definitions. (Colon-separated list)                         |
 | `CC`                     | Path to the C compiler.                                                                          |
@@ -82,7 +82,8 @@ The build process may be configured through the following environment variables:
 | `CONFIGURE_OPTS`         | Additional `./configure` options.                                                                |
 | `MAKE`                   | Custom `make` command (_e.g.,_ `gmake`).                                                         |
 | `MAKE_OPTS` / `MAKEOPTS` | Additional `make` options.                                                                       |
-| `MAKE_INSTALL_OPTS`      | Additional `make install` options.                                                               |
+| `DESTDIR`                | Install compiled Ruby to this directory instead of path e.g. `DESTDIR/usr/local/bin/ruby`        |
+| `MAKE_INSTALL_OPTS`      | Additional `make install` options (use DESTDIR above to set the DESTDIR option)                  |
 | `RUBY_CONFIGURE_OPTS`    | Additional `./configure` options (applies only to Ruby source).                                  |
 | `RUBY_MAKE_OPTS`         | Additional `make` options (applies only to Ruby source).                                         |
 | `RUBY_MAKE_INSTALL_OPTS` | Additional `make install` options (applies only to Ruby source).                                 |
